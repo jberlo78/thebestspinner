@@ -1,0 +1,7 @@
+syntax: glob
+
+*.swp
+*.pyc
+docs/_build/doctrees/*
+docs/_build/html/*
+

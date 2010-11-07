@@ -1,0 +1,8 @@
+MANIFEST.in
+README.rst
+setup.py
+docs/Makefile
+docs/conf.py
+docs/index.rst
+docs/make.bat
+tbs/__init__.py
