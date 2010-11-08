@@ -23,7 +23,7 @@ class AuthenticationError(Error):
     
 class QuotaUsedError(Error):
     """
-    Raised when API quota limit reached error (250 queries per day)
+    Raised when API quota limit reached (250 queries per day)
     """
     def __str__(self):
         return "The Best Spinner API query limit has been reached for today (250 queries per day)."
@@ -31,7 +31,7 @@ class QuotaUsedError(Error):
 
 class Api(object):
     """
-    A class to use The Best Spinner api
+    A class to use The Best Spinner api (get an account at http://snurl.com/the-best-spinner) 
     """
     def __init__(self, username, password):
         self.url = 'http://thebestspinner.com/api.php'
@@ -67,7 +67,7 @@ class Api(object):
         
     def identifySynonyms(self, text, max_syns=3, phrases=()):
         """
-        Calls the 'identitySynonyms' api function (counts towards api query quota). Returns spin-formatted _text_,
+        Calls the 'identitySynonyms' api function (counts towards api query quota). Returns spin-formatted text,
         identified synonyms are replaced.
         
         Args:
@@ -105,7 +105,7 @@ class Api(object):
 
     def replaceEveryonesFavorites(self, text, max_syns=3, quality=3, phrases=()):
         """
-        Calls the 'replaceEveryonesFavorites' api function (counts towards api query quota). Returns spin-formatted _text_
+        Calls the 'replaceEveryonesFavorites' api function (counts towards api query quota). Returns spin-formatted text
         with 'everyone's favorites' replaced. 
         
         Args:

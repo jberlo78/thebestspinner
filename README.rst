@@ -21,7 +21,8 @@ Usage
 >>> tbs = tbs.Api('your_username', 'your_password')
 >>> spin_text = tbs.identifySynonyms(text)
 >>> print spin_text
-u"{This is|This really is|That is|This can be} some text that we'd {like to|prefer to|want to|love to} spin"
+u"{This is|This really is|That is|This can be} some text that we'd {like to|prefer
+to|want to|love to} spin"
 >>> tbs.randomSpin(spin_text)
 u"This really is some text that we'd love to spin"
 
