@@ -1,8 +1,0 @@
-MANIFEST.in
-README.rst
-setup.py
-tbs.py
-docs/Makefile
-docs/conf.py
-docs/index.rst
-docs/make.bat
