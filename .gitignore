@@ -1,4 +1,10 @@
+.installed.cfg
+.mr.developer.cfg
 bin/
+develop-eggs/
+docs/make.bat
 include/
 lib/
 local/
+share/
+src/vvv/
