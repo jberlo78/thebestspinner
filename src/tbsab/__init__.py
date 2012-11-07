@@ -72,7 +72,7 @@ class Api(object):
         result = phpserialize.loads(php)
 
         if result['success'] == 'true':
-            output = result['output']
+            output = result['output'].decode("utf-8")
             return self._replacePlaceholders(output, phrases)
 
         else:
@@ -112,7 +112,7 @@ class Api(object):
         result = phpserialize.loads(php)
 
         if result['success'] == 'true':
-            output = result['output']
+            output = result['output'].decode("utf-8")
             return self._replacePlaceholders(output, phrases)
 
         else:
@@ -146,7 +146,7 @@ class Api(object):
         result = phpserialize.loads(php)
 
         if result['success'] == 'true':
-            output = result['output']
+            output = result['output'].decode("utf-8")
             return self._replacePlaceholders(output, phrases)
 
         else:
