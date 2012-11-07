@@ -31,7 +31,7 @@ Build
 First, you need to `clone` the git repository on GitHub to download the code
 to your local machine::
 
-    $ git clone git@github.com:matejc/tbsab.git
+    $ git clone git@github.com:niteoweb/thebestspinner.git
 
 What follows is initializing the `buildout` environment::
 

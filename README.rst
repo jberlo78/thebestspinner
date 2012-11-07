@@ -7,7 +7,7 @@ service for spinning text (synonym substitution) that creates unique version(s)
 of existing text. This package provides a way to easily interact with
 The Best Spinner API.
 
-* `Source code @ GitHub <https://github.com/matejc/tbsab>`_
+* `Source code @ GitHub <https://github.com/niteoweb/thebestspinner>`_
 
 
 Install within virtualenv
@@ -17,7 +17,7 @@ Install within virtualenv
 
     $ virtualenv foo
     $ cd foo
-    $ git clone https://github.com/matejc/tbsab
+    $ git clone git://github.com/niteoweb/thebestspinner.git
     $ bin/pip install tbsab/
 
     # running tests:
@@ -30,7 +30,7 @@ Buildout
 
 .. sourcecode:: bash
 
-    $ git clone https://github.com/matejc/tbsab
+    $ git clone git://github.com/niteoweb/thebestspinner.git
     $ cd tbsab
     $ python bootstrap.py
     $ bin/buildout
