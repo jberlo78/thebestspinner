@@ -10,6 +10,16 @@ The Best Spinner API.
 * `Source code @ GitHub <https://github.com/niteoweb/thebestspinner>`_
 
 
+Install from package to virtualenv
+==================================
+
+.. sourcecode:: bash
+
+    $ virtualenv --no-site-packages foo
+    $ cd foo
+    $ bin/pip install thebestspinner
+
+
 Install within virtualenv
 =========================
 
