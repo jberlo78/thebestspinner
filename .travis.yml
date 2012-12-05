@@ -7,5 +7,5 @@ install:
 script:
   - bin/test
   - bin/vvv setup.py
-  - bin/vvv src/spinchimp
+  - bin/vvv src/tbs
 
