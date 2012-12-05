@@ -10,6 +10,7 @@ class TestApi(unittest.TestCase):
 
     def setUp(self):
         """Utility code shared among all tests."""
+
         self.tbs = Api('foo@bar.com', 'test_password')
 
     def test_init(self):
@@ -19,6 +20,7 @@ class TestApi(unittest.TestCase):
         We need to test for stored values if class was
         initialized correctly.
         """
+
         self.assertEquals(self.tbs.username, 'foo@bar.com')
         self.assertEquals(self.tbs.password, 'test_password')
         self.assertIsInstance(self.tbs, Api)
@@ -26,6 +28,7 @@ class TestApi(unittest.TestCase):
     @mock.patch('tbs.urllib2')
     def test_randomSpin_call(self, urllib2):
         """Test call of unique_variation() with default values."""
+
         # mock response from Api
         mocked_response = 'a:3:{s:7:"session";s:13:"bbbbbbbbbbbbb";'\
             's:6:"output";s:81:"This is actually '\
@@ -49,6 +52,7 @@ class TestApi(unittest.TestCase):
     @mock.patch('tbs.urllib2')
     def test_identifySynonyms_call(self, urllib2):
         """Test call of text_with_spintax_call() with default values."""
+
         # mock response from Api
         mocked_response = 'a:3:{s:7:"session";s:13:"aaaaaaaaaaaaa";'\
             's:6:"output";s:251:"{This is the|This is actually the|Here is '\
