@@ -15,14 +15,14 @@ Install within virtualenv
 
 .. sourcecode:: bash
 
-    $ virtualenv foo
+    $ virtualenv --no-site-packages foo
     $ cd foo
     $ git clone git://github.com/niteoweb/thebestspinner.git
-    $ bin/pip install tbsab/
+    $ bin/pip install thebestspinner/
 
     # running tests:
     $ bin/pip install unittest2 mock
-    $ bin/python -m unittest discover -s tbsab/src/tbsab/tests
+    $ bin/test
 
 
 Buildout
@@ -31,15 +31,17 @@ Buildout
 .. sourcecode:: bash
 
     $ git clone git://github.com/niteoweb/thebestspinner.git
-    $ cd tbsab
-    $ python bootstrap.py
+    $ virtualenv --no-site-packages thebestspinner
+    $ cd thebestspinner
+    $ bin/python bootstrap.py
     $ bin/buildout
 
     # running tests:
-    $ bin/py -m unittest discover -s src/tbsab/tests
+    $ bin/test
 
     # check code for imperfections
-    $ bin/vvv src/tbsab
+    $ source bin/activate
+    $ vvv src/tbs
 
 
 Usage
@@ -49,10 +51,11 @@ Usage
 
     >>> original_text = "This is the text we want to spin"
     >>> import tbs
-    >>> tbs = tbs.Api('your_username', 'your_password')
-    >>> spin_text = tbs.identifySynonyms(text)
+    >>> thebestspinner = tbs.Api('your_username', 'your_password')
+    >>> spin_text = thebestspinner.identifySynonyms(original_text)
     >>> print spin_text
-    u"{This is|This really is|That is|This can be} some text that we'd {like to|prefer to|want to|love to} spin"
-    >>> tbs.randomSpin(spin_text)
+    u"{This is|This really is|That is|This can be} some text that we'd
+     {like to|prefer to|want to|love to} spin"
+    >>> thebestspinner.randomSpin(spin_text)
     u"This really is some text that we'd love to spin"
 

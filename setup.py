@@ -13,10 +13,11 @@ def read(*rnames):
 long_description = \
     read('README.rst') + \
     read('docs', 'HISTORY.rst') + \
+    read('docs', 'AUTHORS.rst') + \
     read('docs', 'LICENSE.rst')
 
 setup(
-    name='tbsab',
+    name='thebestspinner',
     version="1.0",
     description="Python bindings for TheBestSpinner API",
     long_description=long_description,

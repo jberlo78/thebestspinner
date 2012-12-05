@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from tbsab import Api
+from tbs import Api
 
 import unittest2 as unittest
 import mock
@@ -23,7 +23,7 @@ class TestApi(unittest.TestCase):
         self.assertEquals(self.tbs.password, 'test_password')
         self.assertIsInstance(self.tbs, Api)
 
-    @mock.patch('tbsab.urllib2')
+    @mock.patch('tbs.urllib2')
     def test_randomSpin_call(self, urllib2):
         """Test call of unique_variation() with default values."""
         # mock response from Api
@@ -46,7 +46,7 @@ class TestApi(unittest.TestCase):
             u'rewrite & also über felines!',
         )
 
-    @mock.patch('tbsab.urllib2')
+    @mock.patch('tbs.urllib2')
     def test_identifySynonyms_call(self, urllib2):
         """Test call of text_with_spintax_call() with default values."""
         # mock response from Api

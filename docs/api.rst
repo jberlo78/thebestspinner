@@ -5,12 +5,12 @@ API
 TheBestSpinner
 ==============
 
-.. autoclass:: tbsab.Api
+.. autoclass:: tbs.Api
     :members:
     :private-members:
 
 Exceptions
 ==========
 
-.. automodule:: tbsab.exceptions
+.. automodule:: tbs.exceptions
     :members:

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# tbsab documentation build configuration file, created by
+# tbs documentation build configuration file, created by
 # sphinx-quickstart on Mon Feb  8 19:10:04 2010.
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -36,8 +36,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'tbsab'
-copyright = u'2010, Peter Flood'
+project = u'thebestspinner'
+copyright = u'2010, Peter Flood, 2012 Matej Cotman'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -155,7 +155,7 @@ html_static_path = ['_static']
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'tbsabdoc'
+htmlhelp_basename = 'tbsdoc'
 
 
 # -- Options for LaTeX output -------------------------------------------------
@@ -171,8 +171,8 @@ htmlhelp_basename = 'tbsabdoc'
 latex_documents = [
     (
         'index',
-        'tbsab.tex',
-        u'tbsab Documentation',
+        'tbs.tex',
+        u'tbs Documentation',
         u'',
         'manual'
     ),

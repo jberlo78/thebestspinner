@@ -108,7 +108,7 @@ To validate your source code, run the following two commands:
 
 .. sourcecode:: bash
 
-    $ bin/vvv src/tbsab
+    $ bin/vvv src/tbs
 
 .. note::
     It pays off to invest a little time to make your editor run `pep8` and

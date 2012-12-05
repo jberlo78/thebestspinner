@@ -4,7 +4,7 @@
 Releasing a new version
 =======================
 
-Releasing a new version of `tbsab` involves the following steps:
+Releasing a new version of `tbs` involves the following steps:
 
 #. Create a git tag for the release.
 #. Push the git tag upstream to GitHub.
@@ -59,7 +59,7 @@ in ``setup.py`` and should already be installed in your local bin:
 Example
 =======
 
-In the following example we are releasing version 0.1 of `tbsab`. The
+In the following example we are releasing version 0.1 of `tbs`. The
 package has been prepared so that ``setup.py`` contains the version ``0.1``,
 this change has been committed to git and all changes have been pushed
 upstream to GitHub:
@@ -71,9 +71,9 @@ upstream to GitHub:
 
   # Make a release and upload it to PyPI
   $ bin/mkrelease -d pypi -pq ./
-  Releasing tbsab 0.1
-  Tagging tbsab 0.1
-  To git@github.com:niteoweb/tbsab.git
+  Releasing thebestspinner 0.1
+  Tagging thebestspinner 0.1
+  To git@github.com:niteoweb/thebestspinner.git
   * [new tag]         0.1 -> 0.1
   running egg_info
   running sdist

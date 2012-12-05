@@ -35,12 +35,12 @@ to your local machine::
 
 What follows is initializing the `buildout` environment::
 
-    $ cd tbsab
+    $ cd thebestspinner
     $ virtualenv-2.7 --no-site-packages .
     $ python2.7 bootstrap.py
 
 And now you can `run the buildout`. This will fetch and configure tools and libs
-needed for developing `tbsab`::
+needed for developing `tbs`::
 
     $ bin/buildout
 
@@ -49,7 +49,7 @@ Verify
 ======
 
 Your environment should now be ready. Test that by using the ``py`` Python
-interpreter inside the ``bin`` directory, which has `tbsab` installed
+interpreter inside the ``bin`` directory, which has `tbs` installed
 in it's path:
 
 .. sourcecode:: python
@@ -58,15 +58,16 @@ in it's path:
 
     >>> original_text = "This is the text we want to spin"
     >>> import tbs
-    >>> tbs = tbs.Api('your_username', 'your_password')
-    >>> spin_text = tbs.identifySynonyms(text)
+    >>> thebestspinner = tbs.Api('your_username', 'your_password')
+    >>> spin_text = thebestspinner.identifySynonyms(original_text)
     >>> print spin_text
-    u"{This is|This really is|That is|This can be} some text that we'd {like to|prefer to|want to|love to} spin"
-    >>> tbs.randomSpin(spin_text)
+    u"{This is|This really is|That is|This can be} some text that we'd
+     {like to|prefer to|want to|love to} spin"
+    >>> thebestspinner.randomSpin(spin_text)
     u"This really is some text that we'd love to spin"
 
 
-The code for `tbsab` lives in ``src/``. Make a change and re-run
+The code for `tbs` lives in ``src/``. Make a change and re-run
 ``bin/py`` to see it resembled!
 
 Moreover, you should have the following tools in the ``bin/`` directory, ready
@@ -78,7 +79,7 @@ for use:
 
 **sphinbuilder**
 
-    A tool for testing HTML render of `tbsab`'s documentation.
+    A tool for testing HTML render of `tbs`'s documentation.
 
 **longtest**
 
