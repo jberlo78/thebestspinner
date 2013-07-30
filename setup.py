@@ -18,7 +18,7 @@ long_description = \
 
 setup(
     name='thebestspinner',
-    version="1.0.1",
+    version="1.0.2",
     description="Python bindings for TheBestSpinner API",
     long_description=long_description,
     classifiers=[
