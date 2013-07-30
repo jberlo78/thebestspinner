@@ -15,8 +15,8 @@ class AuthenticationError(TBSError):
         self.password = password
 
     def __str__(self):
-        return "Could not authenticate with username: "
-        "{0} and password: {1}.".format(self.username, self.password)
+        return ("Could not authenticate with username: "
+                "{0} and password: {1}.".format(self.username, self.password))
 
 
 class QuotaUsedError(TBSError):
@@ -24,5 +24,5 @@ class QuotaUsedError(TBSError):
     Raised when API quota limit reached (250 queries per day)
     """
     def __str__(self):
-        return "The Best Spinner API query limit has been"
-        "reached for today (250 queries per day)."
+        return ("The Best Spinner API query limit has been"
+                "reached for today (250 queries per day).")
