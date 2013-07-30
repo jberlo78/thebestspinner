@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from tbs import Api
+from tbs import exceptions
 
 import unittest2 as unittest
 import mock
@@ -75,3 +76,49 @@ class TestApi(unittest.TestCase):
             u"{spin|rewrite|spin and rewrite|whirl} & also "
             u"über {cats|felines|pet cats|kittens and cats}!"
         )
+
+    @mock.patch('tbs.urllib2')
+    def test_replaceEveryonesFavorites_call(self, urllib2):
+        """Test call of unique_variation() with default values."""
+
+        # mock response from Api
+        mocked_response = 'a:3:{s:7:"session";s:13:"bbbbbbbbbbbbb";'\
+            's:6:"output";s:81:"This is actually '\
+            'the text we would like to spin and rewrite & '\
+            'also über felines!";s:7:"success";s:4:"true";}'
+        urllib2.urlopen.return_value.read.return_value = mocked_response
+
+        # test call
+        self.assertEquals(
+            self.tbs.replaceEveryonesFavorites(
+                u'{This is the|This is actually the|Here '
+                u'is the|This can be the} {text|textual content|text '
+                u'message|wording} {we want to|you want to|we would like '
+                u'to|we should} {spin|rewrite|spin and rewrite|whirl} & '
+                u'also über {cats|felines|pet cats|kittens and cats}!'
+            ),
+            u'This is actually the text we would like to spin and '
+            u'rewrite & also über felines!',
+        )
+
+    @mock.patch('tbs.Api._authenticate')
+    @mock.patch('tbs.Api.apiQueries')
+    @mock.patch('tbs.urllib2')
+    def test_apiQueries(self, urllib2, apiQueries, authenticate):
+        """Test call of unique_variation() with default values."""
+
+        # mock response from Api
+        #mocked_response = 'a:3:{s:7:"session";s:13:"bbbbbbbbbbbbb";'\
+        #    's:6:"output";s:81:"This is actually '\
+        #    'the text we would like to spin and rewrite & '\
+        #    'also über felines!";s:7:"success";s:4:"false";}'
+        mocked_response = 'a:1:{s:7:"success";s:5:"false";}'
+        urllib2.urlopen.return_value.read.return_value = mocked_response
+
+        apiQueries.return_value = 1000
+
+        # test call
+        with self.assertRaises(exceptions.QuotaUsedError):
+            self.tbs.replaceEveryonesFavorites(
+                u'{This is the|This is actually the|Here}'
+            )
