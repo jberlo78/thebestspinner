@@ -82,7 +82,7 @@ class Api(object):
             return self._replacePlaceholders(output, phrases)
 
         else:
-            if self.apiQuota() <= 250:
+            if self.apiQueries() > 250:
                 raise QuotaUsedError()
             else:
                 raise Exception("identifySynonyms failed, reason unknown")
@@ -132,7 +132,7 @@ class Api(object):
             return self._replacePlaceholders(output, phrases)
 
         else:
-            if self.apiQuota() <= 250:
+            if self.apiQueries() > 250:
                 raise QuotaUsedError()
             else:
                 raise Exception(
@@ -171,7 +171,7 @@ class Api(object):
             return self._replacePlaceholders(output, phrases)
 
         else:
-            if self.apiQuota() <= 250:
+            if self.apiQueries() > 250:
                 raise QuotaUsedError()
             else:
                 raise Exception("randomSpin failed, reason unknown")
