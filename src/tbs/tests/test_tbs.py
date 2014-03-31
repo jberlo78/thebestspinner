@@ -108,7 +108,7 @@ class TestApi(unittest.TestCase):
         """Test call of unique_variation() with default values."""
 
         # mock response from Api
-        #mocked_response = 'a:3:{s:7:"session";s:13:"bbbbbbbbbbbbb";'\
+        # mocked_response = 'a:3:{s:7:"session";s:13:"bbbbbbbbbbbbb";'\
         #    's:6:"output";s:81:"This is actually '\
         #    'the text we would like to spin and rewrite & '\
         #    'also über felines!";s:7:"success";s:4:"false";}'
